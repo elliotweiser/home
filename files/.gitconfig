@@ -1,0 +1,5 @@
+[user]
+	name = Elliot Weiser
+	email = elliot.weiser@gmail.com
+[include]
+	path = ~/.gitconfig_settings
