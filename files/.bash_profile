@@ -2,19 +2,15 @@
 # .bash_profile
 ###############################################################################
 
+# TODO: Set up GPG Agent once, and auto-detect it if running.
+# Kill if stale, yada yada...
 # Setup gpg-agent
-if [ ! -z $(which gpg-agent 2> /dev/null) ]; then
-  eval $(gpg-agent --daemon --log-file "${HOME}/.gnupg/gpglog" --write-env-file "${HOME}/.gpg-agent-info")
-  if [ -f "${HOME}/.gpg-agent-info" ]; then
-    source "${HOME}/.gpg-agent-info"
-  fi
-  # Save gpg-agent PID
-  export GPG_AGENT_PID=$(env | grep GPG_AGENT_INFO | cut -f 2 -d ':')
-  function gpg_agent_kill {
-    kill "${GPG_AGENT_PID}"
-  }
-  trap gpg_agent_kill EXIT
-fi
+#if [ ! -z $(which gpg-agent 2> /dev/null) ]; then
+#  GPG_AGENT_INFO_PATH="${HOME}/.gpg-agent-info"
+#  res=$(eval $(gpg-agent --daemon --write-env-file "${GPG_AGENT_INFO_PATH}" 2> /dev/null))
+#
+#  [ -z ${res} ] && eval $(gpg-
+#fi
 
 # SOURCE ALL TEH THINGS!
 
