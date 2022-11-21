@@ -1,13 +1,12 @@
-# home
+# Home
 
-My UNIX dotfiles and other config files. A great deal of authorial credit goes
-to [Sam Gleske](https://github.com/samrocketman).
+My UNIX dotfiles and other config files.
 
-# setup
+> Special thanks to [Sam Gleske](https://github.com/samrocketman) for helping me to get started on this early in my career.
 
-To setup all the necessary symlinks, simply `cd` into the repository's `bin` and
-execute:
+# Setup
+
 
 ```bash
-./setup_dotfiles.sh
+./bin/setup_dotfiles.sh
 ```
